@@ -1,0 +1,10 @@
+<h1>DOG</h1>
+
+<ul>
+
+
+    <% @dogs.sort_by {|dog| dog.employees.count}.reverse.each do |dog| %>
+        <li><%= link_to dog.name, dog %> / <%= dog.employees.count %> owner(s)</li>
+    <% end %>
+</ul>
+
