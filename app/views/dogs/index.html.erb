@@ -1,7 +1,7 @@
 
 <h1>All Dogs</h1>
 
-  <% if params[:sort] == "true" or  params[:sort] == nil%>
+  <% if params[:sort] == "true"%>
   <%= link_to "Sort by Number of Owners ⬇", "#{dogs_path}?sort=false" %>
   <% @dogs = @dogs.sort_by{|dog| dog.employee_count} %>
   <% else %>
