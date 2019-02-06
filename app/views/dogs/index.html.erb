@@ -1,0 +1,25 @@
+<h1>Dogs!</h1>
+
+
+<% if params[:sort] == "desc" %>
+    <%= link_to "Sort by employee 1", "#{dogs_path}?sort=asc" %>
+    <% @dogs = @dogs.sort_by {|dog| dog.employee_count}.reverse %>
+<% else %>
+    <%= link_to "Sort by employee", "#{dogs_path}?sort=desc" %>
+    <% @dogs = @dogs.sort_by {|dog| dog.employee_count} %>
+<% end %>
+
+
+
+
+<div>
+
+<% @dogs.each do |dog|%>
+<ul>
+    <%= link_to "#{dog.name} - #{dog.employees.count}", dog_path(dog) %> <br>
+ 
+</ul>
+<% end %>
+</div>
+
+		
