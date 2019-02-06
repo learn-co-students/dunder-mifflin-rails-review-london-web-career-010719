@@ -1,0 +1,8 @@
+
+<%= image_tag("#{@employee.img_url}", height: 250, width: 300)%>
+<br>
+<h1><%= @employee.first_name%> <%= @employee.last_name %></h1>
+<h2>Alias: <%= @employee.alias %></h2>
+<h2>Title: <%= @employee.title %></h2>
+<h2>Office: <%= @employee.office %></h2>
+<h2>Dog: <%= @employee.dog.name %></h2>
