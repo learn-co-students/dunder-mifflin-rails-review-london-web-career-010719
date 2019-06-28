@@ -1,0 +1,13 @@
+<h1><%= @dog.name %></h1>
+
+<p>
+    Breed: <%= @dog.breed %><br>
+    Age: <%= @dog.age %>
+</p>
+
+<h3>This dog has <%= pluralize(@dog.employees.count, "owner") %></h3>
+
+<% @dog.employees.each do |employee| %>
+    <li><%= link_to employee.name, employee %></li>
+<% end %>
+
